@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# MLOps project additions
+wandb/
+results/
+*.pth
+*.bin
+*.safetensors
+data/raw/
+data/processed/
+.env
