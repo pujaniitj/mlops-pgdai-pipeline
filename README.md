@@ -9,9 +9,9 @@
 | Member | Full Name | Roll No | GitHub Username | Tasks |
 |---|---|---|---|---|
 | Member 1 (Admin) | Pujan Chakraborty | G25AIT2076 | pujaniitj | Tasks 1, 2, 3, 4, 8 |
-| Member 2 | Manu Singh | [G25AIT2061] | manuiitj | Task 5 |
+| Member 2 | Manu Singh | G25AIT2061 | manuiitj | Task 5 |
 | Member 3 | Rahul Sharma | G25AIT2144 | g25ait2144 | Task 6 |
-| Member 4 | Sai Chaitanya | [G25AIT2143] | g25ait2143-spec | Task 7 |
+| Member 4 | Sai Chaitanya | G25AIT2143 | g25ait2143-spec | Task 7 |
 
 ---
 
