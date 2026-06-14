@@ -9,9 +9,9 @@
 | Member | Full Name | Roll No | GitHub Username | Tasks |
 |---|---|---|---|---|
 | Member 1 (Admin) | Pujan Chakraborty | G25AIT2076 | pujaniitj | Tasks 1, 2, 3, 4, 8 |
-| Member 2 | Mannu Singh | [TO BE ADDED] | manuiitj | Task 5 |
+| Member 2 | Manu Singh | G25AIT2061 | manuiitj | Task 5 |
 | Member 3 | Rahul Sharma | G25AIT2144 | g25ait2144 | Task 6 |
-| Member 4 | Sai Chaitanya | [TO BE ADDED] | g25ait2143-spec | Task 7 |
+| Member 4 | Sai Chaitanya | G25AIT2143 | g25ait2143-spec | Task 7 |
 
 ---
 
@@ -54,7 +54,7 @@ flowchart TD
     C["Task 3: Model Selection<br/>Member 1 - Pujan Chakraborty<br/>distilbert-base-uncased<br/>67M params, 268 MB<br/>num_labels=2, id2label configured"] --> D
     D["Task 4: Training on Kaggle<br/>Member 1 - Pujan Chakraborty<br/>Kaggle GPU T4 x2<br/>Hugging Face Trainer API<br/>run-v1: lr=3e-5 (selected)<br/>run-v2: lr=5e-5"] --> E
     E["Task 8: W&B Tracking<br/>Member 1 - Pujan Chakraborty<br/>Both runs logged<br/>Accuracy, F1, Loss per epoch<br/>Public dashboard"] --> F
-    F["Task 5: Hugging Face Hub<br/>Member 2 - Mannu Singh<br/>model.push_to_hub()<br/>tokenizer.push_to_hub()<br/>Public model card<br/>Pujaniitj/MLOPS_GROUP_PROJECT"] --> G
+    F["Task 5: Hugging Face Hub<br/>Member 2 - Manu Singh<br/>model.push_to_hub()<br/>tokenizer.push_to_hub()<br/>Public model card<br/>Pujaniitj/MLOPS_GROUP_PROJECT"] --> G
     G["Task 6: Docker Container<br/>Member 3 - Rahul Sharma<br/>python:3.10-slim base image<br/>Loads model from HF Hub at runtime<br/>g25ait2144/mlops-group-project:latest"] --> H
     H["Task 7: GitHub Actions<br/>Member 4 - Sai Chaitanya<br/>ci.yml: flake8 on every push to develop<br/>inference.yml: manual workflow_dispatch<br/>Both workflows passing"] --> I
     I["Automated Inference<br/>Sentiment: negative<br/>Confidence: 0.9963"]
@@ -80,8 +80,8 @@ flowchart LR
 
 | PR | Branch | Author | Reviewer | Description |
 |---|---|---|---|---|
-| PR 1 | setup/initial-code to develop | Pujan Chakraborty | Mannu Singh | Initial code scaffold — data prep, train skeleton |
-| PR 2 | feat/data-mapping to develop | Mannu Singh | Pujan Chakraborty | IMDB label mapping, Dataset README section |
+| PR 1 | setup/initial-code to develop | Pujan Chakraborty | Manu Singh | Initial code scaffold — data prep, train skeleton |
+| PR 2 | feat/data-mapping to develop | Manu Singh | Pujan Chakraborty | IMDB label mapping, Dataset README section |
 | PR 3 | feat/docker-docs to develop | Rahul Sharma | Pujan Chakraborty | Docker Hub documentation in README |
 | PR 4 | feat/actions-docs to develop | Sai Chaitanya | Pujan Chakraborty | GitHub Actions documentation in README |
 | PR 5 | develop to main | Pujan Chakraborty | Admin bypass | Final merge — all tasks complete |
@@ -225,7 +225,7 @@ run-v1 outperformed run-v2 on every key metric. It achieved higher evaluation ac
 
 ## Task 5 — Push Model to Hugging Face Hub
 
-**Completed by: Member 2 — Mannu Singh**
+**Completed by: Member 2 — Manu Singh**
 
 | Property | Value |
 |---|---|
@@ -397,7 +397,7 @@ Both training runs are visible in the W&B dashboard with overlaid loss curves, a
 | Member | GitHub Contributions |
 |---|---|
 | Pujan Chakraborty | Repository admin, initial scaffold (PR 1), data_prep.py, train.py, requirements.txt, Kaggle training notebooks V1 and V2, id2label.json, inference.py, push_to_hub.py |
-| Mannu Singh | PR 1 reviewer and approver, model push to Hugging Face Hub, model card, PR 2 author (label mapping) |
+| Manu Singh | PR 1 reviewer and approver, model push to Hugging Face Hub, model card, PR 2 author (label mapping) |
 | Rahul Sharma | Dockerfile, .dockerignore, Docker Hub push and overview documentation, Docker README section (PR 3) |
 | Sai Chaitanya | ci.yml, inference.yml, GitHub Actions README section (PR 4) |
 
