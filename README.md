@@ -9,9 +9,9 @@
 | Member | Full Name | Roll No | GitHub Username | Tasks |
 |---|---|---|---|---|
 | Member 1 (Admin) | Pujan Chakraborty | G25AIT2076 | pujaniitj | Tasks 1, 2, 3, 4, 8 |
-| Member 2 | Manu Singh | G25AIT2061 | manuiitj | Task 5 |
+| Member 2 | Mannu Singh | [TO BE ADDED] | manuiitj | Task 5 |
 | Member 3 | Rahul Sharma | G25AIT2144 | g25ait2144 | Task 6 |
-| Member 4 | Sai Chaitanya | G25AIT2143 | g25ait2143-spec | Task 7 |
+| Member 4 | Sai Chaitanya | [TO BE ADDED] | g25ait2143-spec | Task 7 |
 
 ---
 
@@ -64,34 +64,27 @@ flowchart TD
 
 ## Pull Request Workflow
 
+The following diagram shows the branching strategy and pull request flow used throughout the project. All work was done on short-lived feature branches that merged into `develop`, with a final merge from `develop` to `main` for release.
+
 ```mermaid
-gitGraph
-   commit id: "Initial commit"
-   branch develop
-   checkout develop
-   commit id: "Initial scaffold and code"
-   branch feat/data-mapping
-   checkout feat/data-mapping
-   commit id: "Add IMDB label mapping"
-   commit id: "Add Dataset README section"
-   checkout develop
-   merge feat/data-mapping id: "Merge PR 2"
-   commit id: "Add Task 5 HF push script"
-   branch feat/docker-docs
-   checkout feat/docker-docs
-   commit id: "Add Docker section to README"
-   checkout develop
-   merge feat/docker-docs id: "Merge PR 3"
-   branch feat/actions-docs
-   checkout feat/actions-docs
-   commit id: "Add GitHub Actions section"
-   checkout develop
-   merge feat/actions-docs id: "Merge PR 4"
-   commit id: "Add Dockerfile"
-   commit id: "Add CI and inference workflows"
-   checkout main
-   merge develop id: "Final merge to main"
+flowchart LR
+    PR1["PR 1<br/>setup/initial-code<br/>Author: Pujan<br/>Reviewer: Mannu"] --> DEV["develop branch"]
+    PR2["PR 2<br/>feat/data-mapping<br/>Author: Mannu<br/>Reviewer: Pujan"] --> DEV
+    PR3["PR 3<br/>feat/docker-docs<br/>Author: Rahul<br/>Reviewer: Pujan"] --> DEV
+    PR4["PR 4<br/>feat/actions-docs<br/>Author: Sai Chaitanya<br/>Reviewer: Pujan"] --> DEV
+    DEV --> PR5["PR 5<br/>develop to main<br/>Final release merge"]
+    PR5 --> MAIN["main branch<br/>Protected<br/>1 review required"]
 ```
+
+### Pull Request History
+
+| PR | Branch | Author | Reviewer | Description |
+|---|---|---|---|---|
+| PR 1 | setup/initial-code to develop | Pujan Chakraborty | Mannu Singh | Initial code scaffold — data prep, train skeleton |
+| PR 2 | feat/data-mapping to develop | Mannu Singh | Pujan Chakraborty | IMDB label mapping, Dataset README section |
+| PR 3 | feat/docker-docs to develop | Rahul Sharma | Pujan Chakraborty | Docker Hub documentation in README |
+| PR 4 | feat/actions-docs to develop | Sai Chaitanya | Pujan Chakraborty | GitHub Actions documentation in README |
+| PR 5 | develop to main | Pujan Chakraborty | Admin bypass | Final merge — all tasks complete |
 
 ---
 
@@ -150,16 +143,6 @@ Feature branches  -->  develop  (via Pull Request with 1 review)
 ```
 
 All members commit to feature branches. Feature branches merge into develop via Pull Requests. Only develop to main merges are permitted after review. Direct pushes to main are blocked.
-
-### Pull Request History
-
-| PR | Branch | Author | Reviewer | Description |
-|---|---|---|---|---|
-| PR 1 | setup/initial-code to develop | Pujan Chakraborty | Mannu Singh | Initial code scaffold — data prep, train skeleton |
-| PR 2 | feat/data-mapping to develop | Mannu Singh | Pujan Chakraborty | IMDB label mapping, Dataset README section |
-| PR 3 | feat/docker-docs to develop | Rahul Sharma | Pujan Chakraborty | Docker Hub documentation in README |
-| PR 4 | feat/actions-docs to develop | Sai Chaitanya | Pujan Chakraborty | GitHub Actions documentation in README |
-| PR 5 | develop to main | Pujan Chakraborty | Admin bypass | Final merge — all tasks complete |
 
 ---
 
